@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css')}}">
+    <script type="text/javascript">
+    function setForm(value) {
+    
+        if(value == 'mamifero'){
+            document.getElementById('clase').style='display:none;';
+            document.getElementById('mamifero').style='display:block;';
+        }
+            if(value == 'theria'){
+                document.getElementById('mamifero').style='display:none;';
+                document.getElementById('theria').style='display:block;';
+            }
+                if(value == 'metatheria'){
+                    document.getElementById('theria').style='display:none;';
+                    document.getElementById('metatheria').style='display:block;';
+                }
+                if(value == 'eutheria'){
+                    document.getElementById('theria').style='display:none;';
+                    document.getElementById('eutheria').style='display:block;';
+                }
+        if(value == 'aves'){
+            document.getElementById('clase').style='display:none;';
+            document.getElementById('aves').style='display:block;';
+        }
+            if(value == 'paleognathae'){
+                document.getElementById('aves').style='display:none;';
+                document.getElementById('paleognathae').style='display:block;';
+            }
+            if(value == 'neognathae'){
+                document.getElementById('aves').style='display:none;';
+                document.getElementById('neognathae').style='display:block;';
+            }
+        
+    }
+</script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>
