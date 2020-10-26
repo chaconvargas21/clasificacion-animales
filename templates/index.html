@@ -6,11 +6,12 @@
 
 {% block body %}
 <div class="content">
+   <h1>{{ result }}</h1>
     <form action="/" method="POST">
         <div id="clase">
             <label>Clase :</label>
-            <select id="clase" onchange="setForm(this.value)">
-                <option disabled selected value> -- select an option -- </option>
+            <select name="clase" id="clase" onchange="setForm(this.value)">
+                <option value=""> -- select an option -- </option>
                 <option value="mamifero">mamifero</option>
                 <option value="aves">aves</option>
             </select>
@@ -18,82 +19,82 @@
 
             <div id="mamifero" style="display: none">
                 <label>Mamifero :</label>
-                <select id="subclase" onchange="setForm(this.value)">
-                    <option disabled selected value> -- select an option -- </option>
+                <select name="subclase" id="subclase" onchange="setForm(this.value)">
+                    <option value=""> -- select an option -- </option>
                     <option value="theria">Theria</option>
                 </select>
             </div>
 
                 <div id="theria" style="display: none">
                     <label>Theria :</label>
-                    <select id="infraclase" onchange="setForm(this.value)">
-                        <option disabled selected value> -- select an option -- </option>
+                    <select name="infraclase" id="infraclase" onchange="setForm(this.value)">
+                        <option value=""> -- select an option -- </option>
                         <option value="metatheria">Metatheria</option>
                         <option value="eutheria">Eutheria</option>
                     </select>
                 </div>
             
-                <div id="metatheria" style="display: none">
-                    <label>Metatheria :</label>
-                    <select id="orden" onchange="setForm(this.value)">
-                        <option disabled selected value> -- select an option -- </option>
-                        <option value="didelphimorphia">Didelphimorphia</option>
-                        <option value="paucituberculata">Paucituberculata</option>
-                        <option value="microbiotheria">Microbiotheria</option>
-                        <option value="dasyuromorphia">Dasyuromorphia</option>
-                        <option value="peramelemorphia">Peramelemorphia</option>
-                        <option value="notoryctemorphia">Notoryctemorphia</option>
-                        <option value="diprotodontia">Diprotodontia</option>
-                    </select>
-                </div>
+                    <div id="metatheria" style="display: none">
+                        <label>Metatheria :</label>
+                        <select name="orden" id="orden" onchange="setForm(this.value)">
+                            <option value=""> -- select an option -- </option>
+                            <option value="didelphimorphia">Didelphimorphia</option>
+                            <option value="paucituberculata">Paucituberculata</option>
+                            <option value="microbiotheria">Microbiotheria</option>
+                            <option value="dasyuromorphia">Dasyuromorphia</option>
+                            <option value="peramelemorphia">Peramelemorphia</option>
+                            <option value="notoryctemorphia">Notoryctemorphia</option>
+                            <option value="diprotodontia">Diprotodontia</option>
+                        </select>
+                    </div>
 
-                <div id="eutheria" style="display: none">
-                    <label>Eutheria :</label>
-                    <select id="infraclase" onchange="setForm(this.value)">
-                        <option disabled selected value> -- select an option -- </option>
-                        <option value="Pilosa">Pilosa</option>
-                        <option value="Cingulata">Cingulata</option>
-                        <option value="Afrosoricida">Afrosoricida</option>
-                        <option value="Erinaceomorpha">Erinaceomorpha</option>
-                        <option value="Soricomorpha">Soricomorpha</option>
-                        <option value="Scandentia">Scandentia</option>
-                        <option value="Dermoptera">Dermoptera</option>
-                        <option value="Chiroptera">Chiroptera</option>
-                        <option value="Primates">Primates</option>
-                        <option value="Carnivora">Carnivora</option>
-                        <option value="Sirenia">Sirenia</option>
-                        <option value="Proboscidea">Proboscidea</option>
-                        <option value="Perissodactyla">Perissodactyla</option>
-                        <option value="Hyracoidea">Hyracoidea</option>
-                        <option value="Tubulidentata">Tubulidentata</option>
-                        <option value="Artiodactyla">Artiodactyla</option>
-                        <option value="Pholidota">Pholidota</option>
-                        <option value="Rodentia">Rodentia</option>
-                        <option value="Lagomorpha">Lagomorpha</option>
-                        <option value="Macroscelidea">Macroscelidea</option>
-                    </select>
-                </div>
+                    <div id="eutheria" style="display: none">
+                        <label>Eutheria :</label>
+                        <select name="infraclase" id="infraclase" onchange="setForm(this.value)">
+                            <option value=""> -- select an option -- </option>
+                            <option value="Pilosa">Pilosa</option>
+                            <option value="Cingulata">Cingulata</option>
+                            <option value="Afrosoricida">Afrosoricida</option>
+                            <option value="Erinaceomorpha">Erinaceomorpha</option>
+                            <option value="Soricomorpha">Soricomorpha</option>
+                            <option value="Scandentia">Scandentia</option>
+                            <option value="Dermoptera">Dermoptera</option>
+                            <option value="Chiroptera">Chiroptera</option>
+                            <option value="Primates">Primates</option>
+                            <option value="Carnivora">Carnivora</option>
+                            <option value="Sirenia">Sirenia</option>
+                            <option value="Proboscidea">Proboscidea</option>
+                            <option value="Perissodactyla">Perissodactyla</option>
+                            <option value="Hyracoidea">Hyracoidea</option>
+                            <option value="Tubulidentata">Tubulidentata</option>
+                            <option value="Artiodactyla">Artiodactyla</option>
+                            <option value="Pholidota">Pholidota</option>
+                            <option value="Rodentia">Rodentia</option>
+                            <option value="Lagomorpha">Lagomorpha</option>
+                            <option value="Macroscelidea">Macroscelidea</option>
+                        </select>
+                    </div>
 
             <div id="aves" style="display: none">
                 <label>Aves :</label>
-                <select id="superorden" onchange="setForm(this.value)">
-                    <option disabled selected value> -- select an option -- </option>
+                <select name="superorden" id="superorden" onchange="setForm(this.value)">
+                    <option value=""> -- select an option -- </option>
                     <option value="paleognathae">Paleognathae</option>
                     <option value="neognathae">Neognathae</option>
                 </select>
             </div>
                 <div id="paleognathae" style="display: none">
                     <label>Paleognathae :</label>
-                    <select id="orden" onchange="setForm(this.value)">
-                        <option disabled selected value> -- select an option -- </option>
+                    <select name="orden" id="orden" onchange="setForm(this.value)">
+                        <option value=""> -- select an option -- </option>
                         <option value="Struthioniformes">Struthioniformes</option>
                         <option value="Tinamiformes">Tinamiformes</option>
                     </select>
                 </div>
                 <div id="neognathae" style="display: none">
                     <label>Neognathae :</label>
-                    <select id="orden" onchange="setForm(this.value)">
-                        <option disabled selected value> -- select an option -- </option>
+                    <select name="orden" id="orden" onchange="setForm(this.value)">
+                        <option value=""> -- select an option -- </option>
                         <option value="Neognathae">Anseriformes</option>
                         <option value="Neognathae">Galliformes</option>
                         <option value="Neognathae">Gaviiformes</option>
@@ -124,6 +125,7 @@
                         <option value="Neognathae">Galbuliformes</option>
                     </select>
                 </div>
+        <input type="submit" value="Enviar">
     </form>
 </div>
 {% endblock %}
