@@ -5,127 +5,953 @@
 {% endblock %}
 
 {% block body %}
+
 <div class="content">
-   <h1>{{ result }}</h1>
+    <h1>Predictor</h1>
+
+    <p>La siguiente descripción corresponde con el animal buscado: </p>
+
     <form action="/" method="POST">
         <div id="clase">
             <label>Clase :</label>
-            <select name="clase" id="clase" onchange="setForm(this.value)">
+            <br>
+            <select class="form-control" name="clase" id="clase" onchange="setForm(this.name,this.value)">
                 <option value=""> -- select an option -- </option>
-                <option value="mamifero">mamifero</option>
-                <option value="aves">aves</option>
+                <option value=mamiferos>mamiferos</option>
+                <option value=aves>aves</option>
             </select>
         </div>
 
-            <div id="mamifero" style="display: none">
-                <label>Mamifero :</label>
-                <select name="subclase" id="subclase" onchange="setForm(this.value)">
-                    <option value=""> -- select an option -- </option>
-                    <option value="theria">Theria</option>
-                </select>
-            </div>
+        <div id="prototheria" style="display: none">
+            <label>
+                Mamíferos primitivos con características reptilianas (ovíparos, glándulas mamarias sin pezones, presencia de cloaca). 
+                Ponen huevos.
+            </label>
+            <br>
+            <select class="form-control" name="prototheria" id="prototheria" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
 
-                <div id="theria" style="display: none">
-                    <label>Theria :</label>
-                    <select name="infraclase" id="infraclase" onchange="setForm(this.value)">
-                        <option value=""> -- select an option -- </option>
-                        <option value="metatheria">Metatheria</option>
-                        <option value="eutheria">Eutheria</option>
-                    </select>
-                </div>
+        <div id="theria" style="display: none">
+            <label>
+                Mamíferos avanzados (vivíparos, glándulas mamarias que abastecen leche al pezón). 
+                Paren crías vivas.
+            </label>
+            <br>
+            <select class="form-control" name="theria" id="theria" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="monotremata" style="display: none">
+            <label>
+                Tienen el cuerpo cubierto de pelos. Producen leche materna pero no tienen mamas. 
+                Sus crías lamen su piel por los costados, de donde sale el líquido. 
+                Poseen pocos dientes y la mandíbula es un hueso muy delgado.
+            </label>
+            <br>
+            <select class="form-control" name="monotremata" id="monotremata" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
             
-                    <div id="metatheria" style="display: none">
-                        <label>Metatheria :</label>
-                        <select name="orden" id="orden" onchange="setForm(this.value)">
-                            <option value=""> -- select an option -- </option>
-                            <option value="didelphimorphia">Didelphimorphia</option>
-                            <option value="paucituberculata">Paucituberculata</option>
-                            <option value="microbiotheria">Microbiotheria</option>
-                            <option value="dasyuromorphia">Dasyuromorphia</option>
-                            <option value="peramelemorphia">Peramelemorphia</option>
-                            <option value="notoryctemorphia">Notoryctemorphia</option>
-                            <option value="diprotodontia">Diprotodontia</option>
-                        </select>
-                    </div>
+        <div id="metatheria" style="display: none">
+            <label>
+                Mamíferos Marsupiales, placentas rudimentarias, crías prematuras, ya que la gestación es muy corta. 
+                Concluyen su crecimiento en una bolsa abdominal.
+            </label>
+            <br>
+            <select class="form-control" name="metatheria" id="metatheria" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
 
-                    <div id="eutheria" style="display: none">
-                        <label>Eutheria :</label>
-                        <select name="infraclase" id="infraclase" onchange="setForm(this.value)">
-                            <option value=""> -- select an option -- </option>
-                            <option value="Pilosa">Pilosa</option>
-                            <option value="Cingulata">Cingulata</option>
-                            <option value="Afrosoricida">Afrosoricida</option>
-                            <option value="Erinaceomorpha">Erinaceomorpha</option>
-                            <option value="Soricomorpha">Soricomorpha</option>
-                            <option value="Scandentia">Scandentia</option>
-                            <option value="Dermoptera">Dermoptera</option>
-                            <option value="Chiroptera">Chiroptera</option>
-                            <option value="Primates">Primates</option>
-                            <option value="Carnivora">Carnivora</option>
-                            <option value="Sirenia">Sirenia</option>
-                            <option value="Proboscidea">Proboscidea</option>
-                            <option value="Perissodactyla">Perissodactyla</option>
-                            <option value="Hyracoidea">Hyracoidea</option>
-                            <option value="Tubulidentata">Tubulidentata</option>
-                            <option value="Artiodactyla">Artiodactyla</option>
-                            <option value="Pholidota">Pholidota</option>
-                            <option value="Rodentia">Rodentia</option>
-                            <option value="Lagomorpha">Lagomorpha</option>
-                            <option value="Macroscelidea">Macroscelidea</option>
-                        </select>
-                    </div>
+        <div id="eutheria" style="display: none">
+            <label>
+                Mamíferos Placentarios, verdaderas placentas, paren crías desarrolladas.
+            </label>
+            <br>
+            <select class="form-control" name="eutheria" id="eutheria" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
 
-            <div id="aves" style="display: none">
-                <label>Aves :</label>
-                <select name="superorden" id="superorden" onchange="setForm(this.value)">
-                    <option value=""> -- select an option -- </option>
-                    <option value="paleognathae">Paleognathae</option>
-                    <option value="neognathae">Neognathae</option>
-                </select>
-            </div>
-                <div id="paleognathae" style="display: none">
-                    <label>Paleognathae :</label>
-                    <select name="orden" id="orden" onchange="setForm(this.value)">
-                        <option value=""> -- select an option -- </option>
-                        <option value="Struthioniformes">Struthioniformes</option>
-                        <option value="Tinamiformes">Tinamiformes</option>
-                    </select>
-                </div>
-                <div id="neognathae" style="display: none">
-                    <label>Neognathae :</label>
-                    <select name="orden" id="orden" onchange="setForm(this.value)">
-                        <option value=""> -- select an option -- </option>
-                        <option value="Neognathae">Anseriformes</option>
-                        <option value="Neognathae">Galliformes</option>
-                        <option value="Neognathae">Gaviiformes</option>
-                        <option value="Neognathae">Podicipediformes</option>
-                        <option value="Neognathae">Sphenisciformes</option>
-                        <option value="Neognathae">Procellariiformes</option>
-                        <option value="Neognathae">Pelecaniformes</option>
-                        <option value="Neognathae">Ciconiiformes</option>
-                        <option value="Neognathae">Phoenicopteriformes</option>
-                        <option value="Neognathae">Falconiformes</option>
-                        <option value="Neognathae">Turniciformes</option>
-                        <option value="Neognathae">Gruiformes</option>
-                        <option value="Neognathae">Mesitornithiformes</option>
-                        <option value="Neognathae">Charadriiformes</option>
-                        <option value="Neognathae">Pteroclidiformes</option>
-                        <option value="Neognathae">Columbiformes</option>
-                        <option value="Neognathae">Psittaciformes</option>
-                        <option value="Neognathae">Opisthocomiformes</option>
-                        <option value="Neognathae">Musphagiformes</option>
-                        <option value="Neognathae">Cuculiformes</option>
-                        <option value="Neognathae">Strigiformes</option>
-                        <option value="Neognathae">Caprimulgiformes</option>
-                        <option value="Neognathae">Apodiformes</option>
-                        <option value="Neognathae">Coliiformes</option>
-                        <option value="Neognathae">Trogoniformes</option>
-                        <option value="Neognathae">Upupiformes</option>
-                        <option value="Neognathae">Coraciiformes</option>
-                        <option value="Neognathae">Galbuliformes</option>
-                    </select>
-                </div>
-        <input type="submit" value="Enviar">
+        <div id="didelphimorphia" style="display: none">
+            <label>
+                Se distinguen por su largo hocico, su cráneo oblongo, 
+                una cresta ósea que recorre longitudinalmente el centro del mismo y unos dientes poco especializados. 
+            </label>
+            <br>
+            <select class="form-control" name="didelphimorphia" id="didelphimorphia" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="paucituberculata" style="display: none">
+            <label>
+                Tienen los ojos pequeños y el pelaje grueso, gris o amarronado.
+                El labio superior está interrumpido por una aleta de piel. 
+                La cola es larga pero no es prensil. Las hembras carecen de bolsa marsupial.                    
+            </label>
+            <br>
+            <select class="form-control" name="paucituberculata" id="paucituberculata" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="microbiotheria" style="display: none">
+            <label>
+                Viven en selvas tropicales templadas en las que abunda el bambú y tienen el tamaño de un pequeño ratón.
+            </label>
+            <br>
+            <select class="form-control" name="microbiotheria" id="microbiotheria" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="dasyuromorphia" style="display: none">
+            <label>
+                Poseen más de tres incisivos en la mandíbula superior y cuatro o más en la inferior, igualmente suelen ser didáctilos,
+                presentan el segundo y tercer dedo de cada pie posterior unido por una vaina.
+            </label>
+            <br>
+            <select class="form-control" name="dasyuromorphia" id="dasyuromorphia" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="peramelemorphia" style="display: none">
+            <label>
+                Poseeen un cuerpo rechoncho, arqueado hacia atrás con un hocico largo, 
+                delicado y afilado, orejas verticales muy grandes y patas relativamente largas y finas, igual que la cola.
+            </label>
+            <br>
+            <select class="form-control" name="peramelemorphia" id="peramelemorphia" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="notoryctemorphia" style="display: none">
+            <label>
+                Poseen garras delanteras que le sirven para moverse por la arena, 
+                más que cavar galerías realizan movimientos que asimilan nadar entre el sustrato.
+            </label>
+            <br>
+            <select class="form-control" name="notoryctemorphia" id="notoryctemorphia" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="diprotodontia" style="display: none">
+            <label>
+                Se caracteriza por la presencia de individuos con dedos sindáctilos,
+                y no más de tres incisivos en cada hemimandíbula superior y dos en la inferior. Los caninos inferiores están ausentes.
+            </label>
+            <br>
+            <select class="form-control" name="diprotodontia" id="diprotodontia" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="pilosa" style="display: none">
+            <label>
+                Presentan cuerpos alargados, fuertes garras, cola larga y en algunos casos prensil.
+            </label>
+            <br>
+            <select class="form-control" name="pilosa" id="pilosa" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="cingulata" style="display: none">
+            <label>
+                Presentan osteodermos, es decir placas óseas articuladas y cubiertas por una epidermis cornea 
+                que cubre –como escudo- la cabeza, espalda y lados y, algunas veces, las piernas.
+            </label>
+            <br>
+            <select class="form-control" name="cingulata" id="cingulata" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="afrosoricida" style="display: none">
+            <label>
+                Posee un hocico ancho, ojos pequeños, bigotes bastante duros y orejas visibles aunque no grandes. 
+            </label>
+            <br>
+            <select class="form-control" name="afrosoricida" id="afrosoricida" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="erinaceomorpha" style="display: none">
+            <label>
+                Caracterizado por la presencia de púas en su cuerpo y los segundos en poseer un pelaje bastante duro 
+                y con cierta morfología a las ratas. 
+            </label>
+            <br>
+            <select class="form-control" name="erinaceomorpha" id="erinaceomorpha" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="soricomorpha" style="display: none">
+            <label>
+                Caracterizado por su pequeño tamaño si los comparamos con el resto de mamíferos, estando entre ellos 
+                los mamíferos más pequeños que existen, con un peso adulto de menos de 2 gramos.
+            </label>
+            <br>
+            <select class="form-control" name="soricomorpha" id="soricomorpha" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="scandentia" style="display: none">
+            <label>
+                Poseen ojos grandes y buena audición. Algunas especies viven en los árboles, otras son terrestres. 
+                Suelen ser nocturnos, aunque también pueden estar activos durante el día. 
+            </label>
+            <br>
+            <select class="form-control" name="scandentia" id="scandentia" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="dermoptera" style="display: none">
+            <label>
+                Presencia de un patagio que comienza en la garganta y se extiende hacia los dedos de las extremidades anteriores, 
+                flancos, patas traseras y cola.
+            </label>
+            <br>
+            <select class="form-control" name="dermoptera" id="dermoptera" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="chiroptera" style="display: none">
+            <label>
+                Caracterizado por sus extremidades anteriores transformadas en alas, siendo los únicos mamíferos voladores.
+            </label>
+            <br>
+            <select class="form-control" name="chiroptera" id="chiroptera" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="primates" style="display: none">
+            <label>
+                Son pentadáctilos, esto quiere decir que poseen cinco dedos en manos y pies. 
+                Sus falanges se encuentran alargadas y presentan uñas planas en lugar de garras. Los pulgares son oponibles
+            </label>
+            <br>
+            <select class="form-control" name="primates" id="primates" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="carnivora" style="display: none">
+            <label>
+                Tiene garras afiladas y mínimo cuatro dedos en cada extremidad y caninos muy desarrollados, 
+                los molares y premolares por lo general tienen bordes cortantes.
+            </label>
+            <br>
+            <select class="form-control" name="carnivora" id="carnivora" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="cetacea" style="display: none">
+            <label>
+                Su respiración es pulmonar, por eso necesitan salir a la superficie para respirar.
+            </label>
+            <br>
+            <select class="form-control" name="cetacea" id="cetacea" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="sirenia" style="display: none">
+            <label>
+                Su principal característica es la ausencia de extremidades posteriores, las anteriores, 
+                en su evolución, se han transformado en aletas.
+            </label>
+            <br>
+            <select class="form-control" name="sirenia" id="sirenia" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="proboscidea" style="display: none">
+            <label>
+                Disponen de un cuerpo robusto, este goza de buena movilidad. Su cabeza de enormes dimensiones, al igual que sus orejas, 
+                contrastan con un cuello corto. 
+                Las patas son alargadas destacando su trompa, órgano sensorial, también prensil y habilitada para la respiración.
+            </label>
+            <br>
+            <select class="form-control" name="proboscidea" id="proboscidea" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="perissodactyla" style="display: none">
+            <label>
+                Son mamíferos ungulados que se caracterizan por la posesión de extremidades con un número 
+                impar de dedos terminados en pezuñas, y con el dedo central, que sirve de apoyo
+            </label>
+            <br>
+            <select class="form-control" name="perissodactyla" id="perissodactyla" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="hyracoidea" style="display: none">
+            <label>
+                Destacan la elasticidad de las almohadillas de sus pies, los delanteros están formado por cuatro dedos y los traseros por tres.  Los colmillos están ausente, aunque poseen una mandíbula fuerte. Disponen de glándulas odoríferas presentes en pelos ubicados en el lomo. La cola es corta, y son mamíferos de pequeño tamaño.
+
+            </label>
+            <br>
+            <select class="form-control" name="hyracoidea" id="hyracoidea" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="tubulidentata" style="display: none">
+            <label>
+                Presencia de cuatro dedos en la patas anteriores y cinco en las posteriores, las uñas muy fuertes 
+                les facultan para excavar entre el sustrato. Destaca su hocico largo y cilíndrico y orejas también alargadas.
+
+            </label>
+            <br>
+            <select class="form-control" name="tubulidentata" id="tubulidentata" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="artiodactyla" style="display: none">
+            <label>
+                Son animales ungulados, por lo que caminan sobre el extremo de sus dedos, los cuales se encuentran revestidos por una pezuña.
+
+            </label>
+            <br>
+            <select class="form-control" name="artiodactyla" id="artiodactyla" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="pholidota" style="display: none">
+            <label>
+                Tiene la cabeza pequeña con un hocico puntiagudo y es de un color bronce. Tiene unas patas y garras fuertes, 
+                que le sirven para excavar una madriguera de dos metros de profundidad en menos de 5 minutos.
+
+            </label>
+            <br>
+            <select class="form-control" name="pholidota" id="pholidota" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="rodentia" style="display: none">
+            <label>
+                Tienen unos incisivos muy desarrollados, utilizados para roer alimentos, 
+                así como a modo de defensa frente a sus principales enemigos.
+
+            </label>
+            <br>
+            <select class="form-control" name="rodentia" id="rodentia" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="lagomorpha" style="display: none">
+            <label>
+                Tienen dos pares de dientes incisivos superiores, frente al único par existente en los roedores.
+
+            </label>
+            <br>
+            <select class="form-control" name="lagomorpha" id="lagomorpha" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="macroscelidea" style="display: none">
+            <label>
+                Tienen ojos grandes y redondos y un hocico móvil muy alargado en forma de una trompa . 
+                Tienen las patas largas y delgadas. Las patas traseras son más largas que las delanteras.
+
+            </label>
+            <br>
+            <select class="form-control" name="macroscelidea" id="macroscelidea" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div> 
+
+        <div id="paleognathae" style="display: none">
+            <label>
+                Especies no voladoras y que carecen de quilla en el esternón. 
+                Poseen una compleja estructura ósea en la mandíbula superior, denominada 'paladar paleognato.
+
+            </label>
+            <br>
+            <select class="form-control" name="paleognathae" id="paleognathae" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="neognathae" style="display: none">
+            <label>
+                Tienen fusionados los huesos metacarpianos, tienen un tercer dedo, alargado, y 13 o menos vértebras.
+                
+            </label>
+            <br>
+            <select class="form-control" name="neognathae" id="neognathae" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="struthioniformes" style="display: none">
+            <label>
+                Reconocibles por la forma de su cuerpo redondeado y grande cubierto de plumas que se asemejan al pelo,
+                    destaca su cuello largo con patas firmes, unas alas pequeñas comparadas al tamaño de su cuerpo 
+                    y unas caderas muy anchas. No pueden volar, su esqueleto y también su musculatura alar está simplificada. 
+
+            </label>
+            <br>
+            <select class="form-control" name="struthioniformes" id="struthioniformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="tinamiformes" style="display: none">
+            <label>
+                Si bien pueden volar, normalmente se comportan como aves corredoras, 
+                aunque no alcanzan cierta velocidad para escapar de sus depredadores. 
+                Por ello suelen levantar pequeños y torpes vuelos, lo suficientemente efectivos para permitirles huir. 
+                La mayoría de sus especies habitan en forestas tropicales y subtropicales de baja altitud en América del Sur.
+                Un número pequeño de especies vive en hábitats abiertos de pastizales. Se alimentan de una variedad de vegetales,
+                bayas, e incluso de insectos. 
+
+            </label>
+            <br>
+            <select class="form-control" name="tinamiformes" id="tinamiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="anseriformes" style="display: none">
+            <label>
+                Presentan un pico ancho y aplanado, pies anteriores palmeados, cuello largo y con estatura corporal 
+                mediana, incluso grande en ciertas especies.
+
+            </label>
+            <br>
+            <select class="form-control" name="anseriformes" id="anseriformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="galliformes" style="display: none">
+            <label>
+                Aves de corral y las relacionadas con la caza.Entre sus características destacan sus formas rechonchas,
+                con más interés por pasar más tiempo deambulando por la tierra en busca de alimentos. 
+                Gracias a sus fuertes patas y dedos pueden cavar fácilmente además de correr velozmente; 
+                también tienen capacidad para el vuelo, aunque generalmente cuando intuyen situaciones de peligro,
+                que es cuando con fuertes aleteos levantan el vuelo y planean a lugares más recogidos.
+
+            </label>
+            <br>
+            <select class="form-control" name="galliformes" id="galliformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="gaviiformes" style="display: none">
+            <label>
+                Aves acuáticas buceadoras, con las patas situadas muy atrás en el cuerpo. 
+                Esta característica los hace muy torpes en tierra.
+
+            </label>
+            <br>
+            <select class="form-control" name="gaviiformes" id="gaviiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="podicipediformes" style="display: none">
+            <label>
+                Aves acuáticas que a menudo se zambullen en busca de alimento o como conducta evasiva.
+                Son muy buenos buceadores, bastantes gregarios, vuelan poco, necesitan largas carreras 
+                para levantar vuelo, cuando caminan (raramente) en tierra, andan erguidos.
+
+            </label>
+            <br>
+            <select class="form-control" name="podicipediformes" id="podicipediformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="sphenisciformes" style="display: none">
+            <label>
+                Aves acuáticas incapaces de volar. Poseen un esternón carenado y una potente musculatura especializada 
+                en la natación. Las aletas tienen los huesos fuertemente comprimidos, son estrechas y no tienen plumas 
+                remeras, las utilizan para impulsarse en el agua.
+
+            </label>
+            <br>
+            <select class="form-control" name="sphenisciformes" id="sphenisciformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="procellariiformes" style="display: none">
+            <label>
+                Aves acuáticas (oceánicas) caracterizadas por la presencia de dos orificios nasales constituidos 
+                por dos tubos con apertura al exterior del estuche córneo, útiles como órgano olfativo, 
+                también para excretar sustancias no digeribles. Destacan sus cuerpos vigorosos, alas alargadas 
+                aunque no demasiadas anchas, presencia de patas palmeadas, pero con el dedo trasero libre.
+                    Su vuelo es consistente y hábil, puesto que en tierra firme su caminar es bastante torpe. 
+
+            </label>
+            <br>
+            <select class="form-control" name="procellariiformes" id="procellariiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="pelecaniformes" style="display: none">
+            <label>
+                Aves generalmente de hábitos acuáticos, medianas y grandes, de distribución mundial.
+                    Normalmente tienen patas con cuatro dedos palmeados. 
+                    La mayoría tiene un parche en la garganta de piel desnuda (parche gular). 
+                    Se alimentan principalmente de peces, calamares y especies marinas en general. 
+                    Anidan en colonias, son aves monógamas y los polluelos suelen vivir en nidos.
+
+            </label>
+            <br>
+            <select class="form-control" name="pelecaniformes" id="pelecaniformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="ciconiiformes" style="display: none">
+            <label>
+                Destacan ser aves que alcanzan una buena estatura, pico alargado al igual que su patas, cuello y alas.
+                    los pies comprenden cuatro dedos que pueden estar o no provistos de membranas.
+
+            </label>
+            <br>
+            <select class="form-control" name="ciconiiformes" id="ciconiiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="phoenicopteriformes" style="display: none">
+            <label>
+                Destacan la presencia de un cuerpo más alto que largo, tronco recortado, 
+                el cuello también alargado al igual que sus patas. Pico curvo y la boca adaptada para la filtración,
+                pues se alimentan de plancton y zooplancton.
+
+            </label>
+            <br>
+            <select class="form-control" name="phoenicopteriformes" id="phoenicopteriformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="falconiformes" style="display: none">
+            <label>
+                Aves rapaces tienen el pico robusto, cubierto en la base por una membrana llamada cera, 
+                de bordes cortantes y punta ganchuda, y uñas aceradas y retráctiles. 
+                Tienen un sentido de la vista excelente, son buenas voladoras y tienen la cabeza y el cuello plumoso.
+
+            </label>
+            <br>
+            <select class="form-control" name="falconiformes" id="falconiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="turniciformes" style="display: none">
+            <label>
+                Aves pequeñas y rechonchas de tonos parduzcos. Son principalmente terrestres y evitan volar,
+                salvo frente a peligros inminentes. Las hembras presentan colores más llamativos que los machos
+                y son las que inician el cortejo. Las hembras generalmente son poliándricas, 
+                se aparean con varios machos y expulsan a las hembras rivales de su territorio.
+                Ambos sexos cooperan en la construcción del nido en el suelo, pero solo el macho se encarga 
+                de la incubación de los huevos y la cría de los polluelos.
+
+            </label>
+            <br>
+            <select class="form-control" name="turniciformes" id="turniciformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="gruiformes" style="display: none">
+            <label>
+                Aves mayoritariamente terrestres que gustan anidar en el suelo o en zonas de agua.
+                Las crías suelen ser bastante precoces al nacer.
+                Este tipo de aves se han adaptado formando nichos ecológicos en casi todo el mundo.
+
+            </label>
+            <br>
+            <select class="form-control" name="gruiformes" id="gruiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="mesitornithiformes" style="display: none">
+            <label>
+                Aves afines tienen las patas largas en proporción al cuerpo, adaptación que aprovechan 
+                para mantenerse caminando la mayor parte del tiempo. 
+                El nido lo construyen sobre la tierra o en plataformas.
+
+            </label>
+            <br>
+            <select class="form-control" name="mesitornithiformes" id="mesitornithiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="charadriiformes" style="display: none">
+            <label>
+                Aves con costumbres acuáticas, también existen especies limícolas. 
+                Su distribución es bastante cosmopolita, entre sus hábitats preferidos destacan las áreas costeras,
+                también existen individuos que prefieren zonas de interior. Por lo general,
+                estas aves presentan buena capacidad para el vuelo, incluso muchas son buenas corredoras.
+
+            </label>
+            <br>
+            <select class="form-control" name="charadriiformes" id="charadriiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="pteroclidiformes" style="display: none">
+            <label>
+                Tienen la cabeza pequeña y similar a las de las palomas, al igual que su cuello, 
+                pero sus cuerpos son más robustos y compactos. Su tamaño oscila entre los 24 y 40 cm de largo 
+                y suelen pesar entre 150 y 500 g. Los adultos presentan un marcado dimorfismo sexual,
+                siendo los machos ligeramente mayores y más coloridos que las hembras. 
+
+            </label>
+            <br>
+            <select class="form-control" name="pteroclidiformes" id="pteroclidiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="columbiformes" style="display: none">
+            <label>
+                Aves terrestres que se alimentan se semillas, aunque algunas especies también son frugívoras, 
+                incluso las hay que complementan su alimentación con pequeños animales invertebrados.
+
+            </label>
+            <br>
+            <select class="form-control" name="columbiformes" id="columbiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="psittaciformes" style="display: none">
+            <label>
+                Aves de un pico robusto y curvado hacia abajo, la postura erguida de su cuerpo 
+                y sus garras prensiles zigodáctilas, es decir, que tienen dos dedos dirigidos hacia delante 
+                y dos hacia atrás. La mayoría son de colores intensos.
+
+            </label>
+            <br>
+            <select class="form-control" name="psittaciformes" id="psittaciformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="opisthocomiformes" style="display: none">
+            <label>
+                Tiene una cara blanca sin plumas y con los ojos rojos, y en la cabeza hay una cresta serrada. 
+                Tiene una capacidad limitada de volar.
+
+            </label>
+            <br>
+            <select class="form-control" name="opisthocomiformes" id="opisthocomiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="musphagiformes" style="display: none">
+            <label>
+                Aves de cuerpo rígido y patas delgadas, alas semirredondeadas, y una cabeza provista de un pico pequeño 
+                y ganchudo, apto para la ingestión de frutas, hojas y pequeños animales.
+
+            </label>
+            <br>
+            <select class="form-control" name="musphagiformes" id="musphagiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="cuculiformes" style="display: none">
+            <label>
+                Aves de dimensiones medianas, salvo determinadas excepciones, que presentan pies zigodáctilos 
+                y cola bastante larga. Por lo general, son de hábitos arborícolas, destacando ciertas especies 
+                parásitas de nidada, que consiguen poner sus huevos en nidos de otras especies de aves y así, 
+                estas últimas, incubar y criar los propios pollos altriciales, en consecuencia, 
+                convirtiéndose en progenitores adoptivos.
+
+            </label>
+            <br>
+            <select class="form-control" name="cuculiformes" id="cuculiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="strigiformes" style="display: none">
+            <label>
+                Los dedos tienden a separarse dos a dos, y el pico, como en los loros, 
+                es muy ganchudo y presenta la base cubierta por una cera. 
+                Los caracteres distintivos del orden están principalmente en los ojos y en los oídos. 
+                Aquellos son muy grandes y en vez de estar situados a los lados de la cabeza, se hallan orientados 
+                hacia adelante, como entre los mamíferos ocurre con los primates, y cada uno de ellos está rodeado 
+                por un gran disco de plumas, el disco facial, limitado por una circunferencia de plumas pequeñas, 
+                duras y rizadas.
+
+            </label>
+            <br>
+            <select class="form-control" name="strigiformes" id="strigiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="caprimulgiformes" style="display: none">
+            <label>
+                Aves de hábitos nocturnos y crepusculares, en el que destacan su cabeza grande y en cierta 
+                medida aplanada, ojos igualmente grandes, pico más bien corto pero con capacidad de abrirlo 
+                considerablemente, este a su vez suele estar rodeado de cerdas. Las patas no están muy desarrolladas, 
+                sin embargo, sus alas son largas al igual que la cola.
+
+            </label>
+            <br>
+            <select class="form-control" name="caprimulgiformes" id="caprimulgiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="apodiformes" style="display: none">
+            <label>
+                Poseen las patas pequeñas y débiles, por tal motivo no andan por la tierra.
+                Su pico es muy variado en forma y tamaño.Su plumaje es denso, 
+                tiene diez plumas primarias y diez timoneras.
+
+            </label>
+            <br>
+            <select class="form-control" name="apodiformes" id="apodiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="coliiformes" style="display: none">
+            <label>
+                Aves con formas bastantes dispares, aunque el grupo en sí tiene ciertos aspectos morfológicos 
+                afines como su pico alargado, determinada forma del paladar o la propia disposición 
+                de los dedos de los pies, por lo general sindáctilos. Sus coloridos suelen ser muy vistosos
+
+            </label>
+            <br>
+            <select class="form-control" name="coliiformes" id="coliiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="trogoniformes" style="display: none">
+            <label>
+                Pájaros esbeltos con bellos coloridos, especialmente en machos, con cola larga y plumas suaves.
+                La parte inferior de las patas también suelen estar emplumadas presentado dedos zigodáctilos. 
+                En su reproducción anidan en huecos de árboles y ambos progenitores suelen involucrarse en 
+                la incubación y cuidado de los polluelos. Son territoriales, arborícolas y prefieren los bosques 
+                tropicales. Se alimentan de insectos, aunque ciertas especies también consumen frutas e incluso 
+                pequeños reptiles.
+
+            </label>
+            <br>
+            <select class="form-control" name="trogoniformes" id="trogoniformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="upupiformes" style="display: none">
+            <label>
+                Poseen el tamaño de un tordo grande. Las alas amplias y la cola tienen manchas de color negro y blanco, 
+                cabeza y pecho de color rosáceo. Tiene pico largo y una cresta distintiva.
+
+            </label>
+            <br>
+            <select class="form-control" name="upupiformes" id="upupiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="coraciiformes" style="display: none">
+            <label>
+                Aves con formas bastantes dispares, aunque el grupo en sí tiene ciertos aspectos morfológicos 
+                afines como su pico alargado, determinada forma del paladar o la propia disposición de los dedos 
+                de los pies, por lo general sindáctilos. Sus coloridos suelen ser muy vistosos.
+
+            </label>
+            <br>
+            <select class="form-control" name="coraciiformes" id="coraciiformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+
+        <div id="galbuliformes" style="display: none">
+            <label>
+                Aves brillantes y elegantes, de pico y cola muy largos, que se alimentan de insectos capturados 
+                en pleno vuelo.
+
+            </label>
+            <br>
+            <select class="form-control" name="galbuliformes" id="galbuliformes" onchange="setForm(this.name,this.value)">
+                <option value=""> -- select an option -- </option>
+                <option value=1>SI</option>
+                <option value=0>NO</option>
+            </select>
+        </div>
+        <br>
+        <input class="btn btn-primary" type="submit" value="Enviar">  
+        <br> 
     </form>
+    <table class="table">
+        {% for table in tables %}
+        {{ table|safe }}
+        {% endfor %}  
+    </table>
 </div>
 {% endblock %}

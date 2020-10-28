@@ -3,39 +3,688 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css')}}">
     <script type="text/javascript">
-    function setForm(value) {
+    function setForm(name,value) {
     
-        if(value == 'mamifero'){
+        if(value == 'mamiferos'){
             document.getElementById('clase').style='display:none;';
-            document.getElementById('mamifero').style='display:block;';
+            document.getElementById('prototheria').style='display:block;';
         }
-            if(value == 'theria'){
-                document.getElementById('mamifero').style='display:none;';
+        
+        if(name == 'prototheria'){
+            if(value == 1){
+                document.getElementById('prototheria').style='display:none;';
+                document.getElementById('monotremata').style='display:block;';
+            }
+            if(value == 0){
+                document.getElementById('prototheria').style='display:none;';
                 document.getElementById('theria').style='display:block;';
             }
-                if(value == 'metatheria'){
-                    document.getElementById('theria').style='display:none;';
-                    document.getElementById('metatheria').style='display:block;';
-                }
-                if(value == 'eutheria'){
-                    document.getElementById('theria').style='display:none;';
-                    document.getElementById('eutheria').style='display:block;';
-                }
+        }
+
+        if(name == 'theria'){
+            if(value == 1){
+                document.getElementById('theria').style='display:none;';
+                document.getElementById('metatheria').style='display:block;';
+            }
+            if(value == 0){
+                document.getElementById('theria').style='display:none;';
+            }
+        }
+
+        if(name == 'monotremata'){
+            if(value == 1){
+                document.getElementById('monotremata').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('monotremata').style='display:none;';
+            }
+        }
+
+        if(name == 'metatheria'){
+            if(value == 1){
+                document.getElementById('metatheria').style='display:none;';
+                document.getElementById('didelphimorphia').style='display:block;';
+            }
+            if(value == 0){
+                document.getElementById('metatheria').style='display:none;';
+                document.getElementById('eutheria').style='display:block;';
+            }
+        }
+
+        if(name == 'didelphimorphia'){
+            if(value == 1){
+                document.getElementById('didelphimorphia').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('didelphimorphia').style='display:none;';
+                document.getElementById('paucituberculata').style='display:block;';
+            }
+        }
+
+        if(name == 'paucituberculata'){
+            if(value == 1){
+                document.getElementById('paucituberculata').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('paucituberculata').style='display:none;';
+                document.getElementById('microbiotheria').style='display:block;';
+            }
+        }
+
+        if(name == 'microbiotheria'){
+            if(value == 1){
+                document.getElementById('microbiotheria').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('microbiotheria').style='display:none;';
+                document.getElementById('dasyuromorphia').style='display:block;';
+            }
+        }
+
+        if(name == 'dasyuromorphia'){
+            if(value == 1){
+                document.getElementById('dasyuromorphia').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('dasyuromorphia').style='display:none;';
+                document.getElementById('peramelemorphia').style='display:block;';
+            }
+        }
+
+        if(name == 'peramelemorphia'){
+            if(value == 1){
+                document.getElementById('peramelemorphia').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('peramelemorphia').style='display:none;';
+                document.getElementById('notoryctemorphia').style='display:block;';
+            }
+        }
+
+        if(name == 'notoryctemorphia'){
+            if(value == 1){
+                document.getElementById('notoryctemorphia').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('notoryctemorphia').style='display:none;';
+                document.getElementById('diprotodontia').style='display:block;';
+            }
+        }
+
+        if(name == 'diprotodontia'){
+            if(value == 1){
+                document.getElementById('diprotodontia').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('diprotodontia').style='display:none;';
+            }
+        } 
+
+        if(name == 'eutheria'){
+            if(value == 1){
+                document.getElementById('eutheria').style='display:none;';
+                document.getElementById('pilosa').style='display:block;';
+            }
+            if(value == 0){
+                document.getElementById('eutheria').style='display:none;';
+            }
+        }
+
+        if(name == 'pilosa'){
+            if(value == 1){
+                document.getElementById('pilosa').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('pilosa').style='display:none;';
+                document.getElementById('cingulata').style='display:block;';
+            }
+        }
+
+        if(name == 'cingulata'){
+            if(value == 1){
+                document.getElementById('cingulata').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('cingulata').style='display:none;';
+                document.getElementById('afrosoricida').style='display:block;';
+            }
+        }
+
+        if(name == 'afrosoricida'){
+            if(value == 1){
+                document.getElementById('afrosoricida').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('afrosoricida').style='display:none;';
+                document.getElementById('erinaceomorpha').style='display:block;';
+            }
+        }
+
+        if(name == 'erinaceomorpha'){
+            if(value == 1){
+                document.getElementById('erinaceomorpha').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('erinaceomorpha').style='display:none;';
+                document.getElementById('soricomorpha').style='display:block;';
+            }
+        }
+
+        if(name == 'soricomorpha'){
+            if(value == 1){
+                document.getElementById('soricomorpha').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('soricomorpha').style='display:none;';
+                document.getElementById('scandentia').style='display:block;';
+            }
+        }
+
+        if(name == 'scandentia'){
+            if(value == 1){
+                document.getElementById('scandentia').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('scandentia').style='display:none;';
+                document.getElementById('dermoptera').style='display:block;';
+            }
+        }
+
+        if(name == 'dermoptera'){
+            if(value == 1){
+                document.getElementById('dermoptera').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('dermoptera').style='display:none;';
+                document.getElementById('chiroptera').style='display:block;';
+            }
+        }
+
+        if(name == 'chiroptera'){
+            if(value == 1){
+                document.getElementById('chiroptera').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('chiroptera').style='display:none;';
+                document.getElementById('primates').style='display:block;';
+            }
+        }
+
+        if(name == 'primates'){
+            if(value == 1){
+                document.getElementById('primates').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('primates').style='display:none;';
+                document.getElementById('carnivora').style='display:block;';
+            }
+        }
+
+        if(name == 'carnivora'){
+            if(value == 1){
+                document.getElementById('carnivora').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('carnivora').style='display:none;';
+                document.getElementById('cetacea').style='display:block;';
+            }
+        }
+
+        if(name == 'cetacea'){
+            if(value == 1){
+                document.getElementById('cetacea').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('cetacea').style='display:none;';
+                document.getElementById('sirenia').style='display:block;';
+            }
+        }
+
+        if(name == 'sirenia'){
+            if(value == 1){
+                document.getElementById('sirenia').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('sirenia').style='display:none;';
+                document.getElementById('proboscidea').style='display:block;';
+            }
+        }
+
+        if(name == 'proboscidea'){
+            if(value == 1){
+                document.getElementById('proboscidea').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('proboscidea').style='display:none;';
+                document.getElementById('perissodactyla').style='display:block;';
+            }
+        }
+
+        if(name == 'perissodactyla'){
+            if(value == 1){
+                document.getElementById('perissodactyla').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('perissodactyla').style='display:none;';
+                document.getElementById('hyracoidea').style='display:block;';
+            }
+        }
+
+        if(name == 'hyracoidea'){
+            if(value == 1){
+                document.getElementById('hyracoidea').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('hyracoidea').style='display:none;';
+                document.getElementById('tubulidentata').style='display:block;';
+            }
+        }
+
+        if(name == 'tubulidentata'){
+            if(value == 1){
+                document.getElementById('tubulidentata').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('tubulidentata').style='display:none;';
+                document.getElementById('artiodactyla').style='display:block;';
+            }
+        }
+
+        if(name == 'artiodactyla'){
+            if(value == 1){
+                document.getElementById('artiodactyla').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('artiodactyla').style='display:none;';
+                document.getElementById('pholidota').style='display:block;';
+            }
+        }
+
+        if(name == 'artiodactyla'){
+            if(value == 1){
+                document.getElementById('artiodactyla').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('artiodactyla').style='display:none;';
+                document.getElementById('pholidota').style='display:block;';
+            }
+        }
+
+        if(name == 'pholidota'){
+            if(value == 1){
+                document.getElementById('pholidota').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('pholidota').style='display:none;';
+                document.getElementById('rodentia').style='display:block;';
+            }
+        }
+
+        if(name == 'rodentia'){
+            if(value == 1){
+                document.getElementById('rodentia').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('rodentia').style='display:none;';
+                document.getElementById('lagomorpha').style='display:block;';
+            }
+        }
+
+        if(name == 'lagomorpha'){
+            if(value == 1){
+                document.getElementById('lagomorpha').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('lagomorpha').style='display:none;';
+                document.getElementById('macroscelidea').style='display:block;';
+            }
+        }
+
+        if(name == 'macroscelidea'){
+            if(value == 1){
+                document.getElementById('macroscelidea').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('macroscelidea').style='display:none;';
+            }
+        }
+
         if(value == 'aves'){
             document.getElementById('clase').style='display:none;';
-            document.getElementById('aves').style='display:block;';
+            document.getElementById('paleognathae').style='display:block;';
         }
-            if(value == 'paleognathae'){
-                document.getElementById('aves').style='display:none;';
-                document.getElementById('paleognathae').style='display:block;';
+
+        if(name == 'paleognathae'){
+            if(value == 1){
+                document.getElementById('paleognathae').style='display:none;';
+                document.getElementById('struthioniformes').style='display:block;';
             }
-            if(value == 'neognathae'){
-                document.getElementById('aves').style='display:none;';
+            if(value == 0){
+                document.getElementById('paleognathae').style='display:none;';
                 document.getElementById('neognathae').style='display:block;';
             }
-        
+        }
+
+        if(name == 'struthioniformes'){
+            if(value == 1){
+                document.getElementById('struthioniformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('struthioniformes').style='display:none;';
+                document.getElementById('tinamiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'tinamiformes'){
+            if(value == 1){
+                document.getElementById('tinamiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('tinamiformes').style='display:none;';
+            }
+        }
+
+        if(name == 'neognathae'){
+            if(value == 1){
+                document.getElementById('neognathae').style='display:none;';
+                document.getElementById('anseriformes').style='display:block;';
+            }
+            if(value == 0){
+                document.getElementById('neognathae').style='display:none;';
+            }
+        }
+
+        if(name == 'anseriformes'){
+            if(value == 1){
+                document.getElementById('anseriformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('anseriformes').style='display:none;';
+                document.getElementById('galliformes').style='display:block;';
+            }
+        }
+
+        if(name == 'galliformes'){
+            if(value == 1){
+                document.getElementById('galliformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('galliformes').style='display:none;';
+                document.getElementById('gaviiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'gaviiformes'){
+            if(value == 1){
+                document.getElementById('gaviiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('gaviiformes').style='display:none;';
+                document.getElementById('podicipediformes').style='display:block;';
+            }
+        }
+
+        if(name == 'podicipediformes'){
+            if(value == 1){
+                document.getElementById('podicipediformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('podicipediformes').style='display:none;';
+                document.getElementById('sphenisciformes').style='display:block;';
+            }
+        }
+
+        if(name == 'sphenisciformes'){
+            if(value == 1){
+                document.getElementById('sphenisciformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('sphenisciformes').style='display:none;';
+                document.getElementById('procellariiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'procellariiformes'){
+            if(value == 1){
+                document.getElementById('procellariiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('procellariiformes').style='display:none;';
+                document.getElementById('pelecaniformes').style='display:block;';
+            }
+        }
+
+        if(name == 'pelecaniformes'){
+            if(value == 1){
+                document.getElementById('pelecaniformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('pelecaniformes').style='display:none;';
+                document.getElementById('ciconiiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'ciconiiformes'){
+            if(value == 1){
+                document.getElementById('ciconiiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('ciconiiformes').style='display:none;';
+                document.getElementById('phoenicopteriformes').style='display:block;';
+            }
+        }
+
+        if(name == 'phoenicopteriformes'){
+            if(value == 1){
+                document.getElementById('phoenicopteriformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('phoenicopteriformes').style='display:none;';
+                document.getElementById('falconiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'falconiformes'){
+            if(value == 1){
+                document.getElementById('falconiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('falconiformes').style='display:none;';
+                document.getElementById('turniciformes').style='display:block;';
+            }
+        }
+
+        if(name == 'turniciformes'){
+            if(value == 1){
+                document.getElementById('turniciformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('turniciformes').style='display:none;';
+                document.getElementById('gruiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'gruiformes'){
+            if(value == 1){
+                document.getElementById('gruiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('gruiformes').style='display:none;';
+                document.getElementById('mesitornithiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'mesitornithiformes'){
+            if(value == 1){
+                document.getElementById('mesitornithiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('mesitornithiformes').style='display:none;';
+                document.getElementById('charadriiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'charadriiformes'){
+            if(value == 1){
+                document.getElementById('charadriiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('charadriiformes').style='display:none;';
+                document.getElementById('pteroclidiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'pteroclidiformes'){
+            if(value == 1){
+                document.getElementById('pteroclidiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('pteroclidiformes').style='display:none;';
+                document.getElementById('columbiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'columbiformes'){
+            if(value == 1){
+                document.getElementById('columbiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('columbiformes').style='display:none;';
+                document.getElementById('psittaciformes').style='display:block;';
+            }
+        }
+
+        if(name == 'psittaciformes'){
+            if(value == 1){
+                document.getElementById('psittaciformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('psittaciformes').style='display:none;';
+                document.getElementById('opisthocomiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'opisthocomiformes'){
+            if(value == 1){
+                document.getElementById('opisthocomiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('opisthocomiformes').style='display:none;';
+                document.getElementById('musphagiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'musphagiformes'){
+            if(value == 1){
+                document.getElementById('musphagiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('musphagiformes').style='display:none;';
+                document.getElementById('cuculiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'cuculiformes'){
+            if(value == 1){
+                document.getElementById('cuculiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('cuculiformes').style='display:none;';
+                document.getElementById('strigiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'strigiformes'){
+            if(value == 1){
+                document.getElementById('strigiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('strigiformes').style='display:none;';
+                document.getElementById('caprimulgiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'caprimulgiformes'){
+            if(value == 1){
+                document.getElementById('caprimulgiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('caprimulgiformes').style='display:none;';
+                document.getElementById('apodiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'apodiformes'){
+            if(value == 1){
+                document.getElementById('apodiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('apodiformes').style='display:none;';
+                document.getElementById('coliiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'coliiformes'){
+            if(value == 1){
+                document.getElementById('coliiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('coliiformes').style='display:none;';
+                document.getElementById('trogoniformes').style='display:block;';
+            }
+        }
+
+        if(name == 'trogoniformes'){
+            if(value == 1){
+                document.getElementById('trogoniformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('trogoniformes').style='display:none;';
+                document.getElementById('upupiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'upupiformes'){
+            if(value == 1){
+                document.getElementById('upupiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('upupiformes').style='display:none;';
+                document.getElementById('coraciiformes').style='display:block;';
+            }
+        }
+
+        if(name == 'coraciiformes'){
+            if(value == 1){
+                document.getElementById('coraciiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('coraciiformes').style='display:none;';
+                document.getElementById('galbuliformes').style='display:block;';
+            }
+        }
+
+        if(name == 'galbuliformes'){
+            if(value == 1){
+                document.getElementById('galbuliformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('galbuliformes').style='display:none;';
+            }
+        }
+
+        if(name == 'musphagiformes'){
+            if(value == 1){
+                document.getElementById('musphagiformes').style='display:none;';
+            }
+            if(value == 0){
+                document.getElementById('musphagiformes').style='display:none;';
+                document.getElementById('cuculiformes').style='display:block;';
+            }
+        }
     }
 </script>
     {% block head %}{% endblock %}

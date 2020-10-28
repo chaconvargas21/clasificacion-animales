@@ -1,0 +1,101 @@
+NRO,NOMBRE,CLASE,ORDEN,FAMILIA,GENERO,ESPECIE
+1,Perro,Mamífero,Carnivora,Canidae,Canis,Canis lupus familiaris
+2,Gato Montes,Mamífero,Carnivora,Felidae,Leopardus,Leopardus jacobitus
+3,vaca,Mamífero,Artiodactyla,Bovidae,Bos,Bos primigenius
+4,Rata de alcantarilla,Mamífero,Rodentia,Muridae,Rattus,Rattus norvegicus
+5,zorro andino,Mamífero,Carnivora,canidae,Lycalopex,Lycalopex culpaeus
+6,Oso de anteojos,Mamífero,Carnivora,Ursidae,Tremarctos,Tremarctos ornatus
+7,Carollia manu,Mamífero,Chiroptera,Phyllostomidae,Carollia,Carollia manu
+8,Oveja,Mamífero,Artiodactyla,Bovidae,Ovis,Ovis orientalis
+9,Venado enano,Mamífero,Cetartiodactyla,Cervidae,Mazama,Mazama chunyi
+10,Llama,Mamífero,Artiodactyla,Camelidae,Lama,Lama glama
+11,Armadillo de nariz grande,Mamífero,Cingulata,Dasypodidae,Dasypus,Dasypus kappleri
+12,Mono choro de cola amarilla,Mamífero,Primates,Atelidae,Oreonax,Oreonax flavicauda
+13,Burro,Mamífero,Perissodactyla,Equidae,Equus,Equus africanus asinus
+14,Majáz,Mamífero,Rodentia,Agoutidae,Cuniculus,Cuniculus paca
+15,Ronsoco,Mamífero,Rodentia,Caviidae,Hydrochoerus,Hydrochoerus hydrochaeris
+16,"Sajino, monte chancho",Mamífero,Artiodactyla,Taysassuidae,Tayassu,Tayassu pecari
+17,"Sachavaca, tapir",Mamífero,Perisodactyla,Tapiridae,Tapirus,Tapirus terrestris
+18,Venado colorado,Mamífero,Artiodactyla,Cervidae,Mazama,Mazama americana
+19,Mono aullador rojo,Mamífero,Primates,Atelidae,Alouatta,Alouatta seniculus
+20,"Mono araña, maquisapa",Mamífero,Primates,Atelidae,Ateles,Ateles chamek
+21,"Mono araña negro, maquisapa",Mamífero,Primates,Atelidae,Ateles,Ateles paniscus
+22,"Mono pichico, mono leoncito",Mamífero,Primates,Callitrichidae,Saguinus,Saguinus fuscicollis
+23,Mono capuchino,Mamífero,Primates,Cebidae,Sapajus,Sapajus apella
+24,Mono choro común,Mamífero,Primates,Cebidae,Lagothix,Lagothrix lagotricha
+25,Mono ardilla,Mamífero,Primates,Cebidae,Saimiri,Saimiri boliviensis
+26,Vicuña,Mamífero,Cetartiodactyla,Camelidae,Vicugna,Vicugna vicugna
+27,Quirquincho andino,Mamífero,Cingulata,Dasypodidae,Chaetophractus,Chaetophractus nationi
+28,Zarigüeyita lanuda,Mamífero,Didelphimorphia,Didelphidae,Caluromys,Caluromys lanatus
+29,Comadrejita marsupial ratona,Mamífero,Didelphimorphia,Didelphidae,Marmosa,Marmosa murina
+30,Zarigüeya andina de orejas blancas,Mamífero,Didelphimorphia,Didelphidae,Didelphis,Didelphis pernigra
+31,Murciélago de sacos orejudo,Mamífero,Chiroptera,Emballonuridae,Poropteryx,Peropteryx macrotis macrotis
+32,Murciélago frutero común,Mamífero,Chiroptera,Phyllostomidae,Carollia,Carollia perspicillata
+33,Murciélago frutero plateado,Mamífero,Chiroptera,Phyllostomidae,Dermanura,Dermanura glauca
+34,Tejón,Mamífero,Carnivora,Mustelidae,Eira,Eira barbara
+35,Comadreja,Mamífero,Carnivora,Mustelidae,Mustela,Mustela frenata
+36,Zorrino,Mamífero,Carnivora,Mustelidae,Conepatus,Conepatus chinga
+37,Gato marino,Mamífero,Carnivora,Mustelidae,Lontra,Lontra longicaudis
+38,Capiso,Mamífero,Carnivora,Procyonidae,Nasuella,Nasuella olivácea
+39,Coatí de cola anillada,Mamífero,Carnivora,Procyonidae,Nasua,Nasua nasua
+40,Puma,Mamífero,Carnivora,Felidae,Puma,Puma concolor
+41,"Ciervo altoandino, venado andino",Mamífero,Cetartiodactyla,Cervidae,Hippocamelus,Hippocamelus antisensis
+42,Venado cola blanca,Mamífero,Cetartiodactyla,Cervidae,Odocoileus,Odocoileus peruvianus
+43,Sihuayro,Mamífero,Rodentia,Dasyproctidae,Dasyprocta,Dasyprocta kalinowskii
+44,Viscacha peruana,Mamífero,Rodentia,Chinchillidae,Lagidium,Lagidium peruanum
+45,Cuy silvestre,Mamífero,Rodentia,Caviidae,Cavia,Cavia tschudii
+46,Ratón montaraz marcado,Mamífero,Rodentia,Cricetidae,Thomasomys,Thomasomys notatus
+47,Gato,Mamífero,Carnivora,Felidae,Felis,Felis silvestris catus
+48,Alpaca,Mamífero,Artiodactyla,Camelidae,Vicugna,Vicugna pacos
+49,Guanaco,Mamífero,Artiodactyla,Camelidae,Lama,Lama guanicoe
+50,Armadillo,Mamífero,Cingulata,Dasypodidae,Dasypus,Dasypodidae
+51,carachuoa,Mamífero,Cingulata,Chlamyphoridae,Priodontes,Priodontes maximus
+52,Pudu,Mamífero,Artiodactyla,Cervidae,Pudu,Pudu puda
+53,Taruca,Mamífero,Artiodactyla,Cervidae,Hippocamelus,Hippocamelus antisensis
+54,Pacarana,Mamífero,Rodentia,Dinomyidae,Dinomys,Dinominys Branickii
+55,Rata negra,Mamífero,Rodentia,Muridae,Rattus,Rattus rattus
+56,Raton,Mamífero,Rodentia,Muridae,Mus,Mus musculus
+57,Ratoncito andino,Mamífero,Rodentia,Cricetidae,Abrothrix,Abrothrix andinus
+58,Conejo,Mamífero,Lagomorpha,Leporidae,Sylvilagus,Sylvilagus brasiliensis
+59,Liebre,Mamífero,Lagomorpha,Leporidae,Eulagos,Eulagos europaeus
+60,Conejo,Mamífero,Lagomorpha,Leporidae,Oryctolagus,Oryctolagus cuniculus
+61,Caballo,Mamífero,Perissodactyla,Equidae,Equus,Equus ferus caballus
+62,Cabra,Mamífero,Artiodactyla,Bovidae,Capra,Capra aegagrus
+63,Cerdo,Mamífero,Artiodactyla,Suidae,Sus,Sus scrofa
+64,Tigrillo,Mamífero,Carnivora,Felidae,Leopardus,Leopardus pardalis
+65,Frailecillo,Mamífero,Primates,Cebidae,Saimiri,Saimiri sciureus
+66,Jaguar,Mamífero,Carnivora,Felidae,Panthera,Panthera onca
+67,Machin Negro,Mamífero,Primates,Cebidae,Sapajus,Sapajus macrocephalus
+68,Sacha perro,Mamífero,Carnivora,Canidae,Speothos,Speothos venaticus
+69,Lobo de rio,Mamífero,Carnivora,Mustelidae,Pteronura,Pteronura brasiliensis
+70,Chosna,Mamífero,Carnivora,Procyonidae,Bassaricyon,Bassariyon alleni
+71,Mapache,Mamífero,Carnivora,Procyonidae,Procyon ,Procyon cancrivorus
+72,Carachupa,Mamífero,Cingulata,Chlamyphoridae,Cabassous,Cabassous unicintus
+73,Zorrito de rio,Mamífero,Didelphimorphia,Didelphidae,Chironectes,Chironectes minimus
+74,Marmosa colorada,Mamífero,Didelphimorphia,Didelphidae,Marmosa,Marmosa rubra
+75,Gato colocolo,Mamífero,Carnivora,Felidae,Leopardus,Leopardus colocolo
+76,Perro selvatico,Mamífero,Carnivora,Canidae,Atelocynus,Atelocynus microtis
+77,Sajino,Mamífero,Artiodactyla,Taysassuidae,Pecari,Pecari tajacu
+78,Comadrejita marsupial palida,Mamífero,Didelphimorphia,Didelphidae,Marmosa,Marmosops cf impavidus
+79,Zarigüeya andina de orejas blancas,Mamífero,Didelphimorphia,Didelphidae,Didelphis,Didelphis pernigra
+80,"Comadreja, tolompeo, achocalla",Mamífero,Carnivora,Mustelidae,Mustela,Mustela frenata
+81,Raton montaraz dorado,Mamífero,Rodentia,Cricetidae,Thomasomys,Thomasomys aureus aureus
+82,Raton montaraz delicado,Mamífero,Rodentia,Cricetidae,Thomasomys,Thomasomys gracilis gracilis
+83,Raton arrozalero de cola larga,Mamífero,Rodentia,Cricetidae,Oligoryzomys,Oligoryzomys longicaudatus
+84,Ratón arrozalero destructor,Mamífero,Rodentia,Cricetidae,Oligoryzomys,Oligoryzomys destructor
+85,Ratón campestre montañés ,Mamífero,Rodentia,Cricetidae,Akodon,Akodon orophilus
+86,Ratón campestre de bosque montano ,Mamífero,Rodentia,Cricetidae,Akodon,Akodon torques
+87,Ratón campestre de vientre pizarra,Mamífero,Rodentia,Cricetidae,Akodon,Akodon surdus
+88,Ratón campestre moreno ,Mamífero,Rodentia,Cricetidae,Akodon,Akodon subfuscus
+89,Musaraña marsupial incaica,Mamífero,Paucituberculata,Caenolestidae,Lestoros,Lestoros inca
+90,Murciélago longirostro sin cola,Mamífero,Chiroptera,Phyllostomidae,Anoura,Anoura geoffroyi
+91,Murciélago longirostro menor,Mamífero,Chiroptera,Phyllostomidae,Anoura,Anoura caudifer
+92,Murcielago frutero colicorto,Mamífero,Chiroptera,Phyllostomidae,Carollia,Carollia brevicauda
+93,Murcielago frutero comun,Mamífero,Chiroptera,Phyllostomidae,Carollia,Carollia perspicillata
+94,Serafin,Mamífero,Pilosa,Cyclopedidae,Cyclopes,Cyclopes didactylus
+95,Pichico,Mamífero,Primates,Callitrichidae,Saguinus,Saguinus mystax
+96,Saki gris,Mamífero,Primates,Petheciidae,Pithecia,Pithecia irrorata
+97,Punchana,Mamífero,Rodentia,Dasyproctidae,Myoprocta,Myoprocta pratti
+98,Machetero,Mamífero,Rodentia,Dinomyidae,Dinomys,Dinomys branickii
+99,Rata,Mamífero,Rodentia,Echimidae,Pattonomys,Pattonomys occassius
+100,Ardilla,Mamífero,Rodentia,Sciuridae,Sciurus,Sciurus ignitus
