@@ -1,0 +1,36 @@
+{% extends "estructura.html" %}
+{% block body %}
+        
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column bg-dark text-white">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand"></h3>
+          <nav class="nav nav-masthead justify-content-center">
+           
+            <h1 class="text-white">SISTEMA EXPERTO DE CLASIFICACION DE ANIMALES</h1>
+          </nav>
+        </div>
+      </header>
+        <br>
+        <br>
+        <br>
+        <div class="nav nav-masthead justify-content-center">
+          <form action="{{ url_for('clasificador')}}" method="POST">
+          <button class="btn btn-lg btn-secondary">Clasificador</button></form>
+        </div>
+        <br>
+        <div class="nav nav-masthead justify-content-center">
+          <form action="{{ url_for('predictor')}}" method="GET">
+          <button class="btn btn-lg btn-secondary">Predictor</button></form>
+        </div>
+        <br>
+        <br>
+      <footer class="mastfoot mt-auto">
+        <div class="nav nav-masthead justify-content-center">
+          <p>CURSO: INTELIGENCIA ARTIFICIAL SEMESTRE 2020-I</p>
+        </div>
+      </footer>
+    </div>
+
+
+{% endblock %}

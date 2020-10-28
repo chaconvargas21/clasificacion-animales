@@ -5,8 +5,12 @@ from sklearn.model_selection import train_test_split
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST','GET'])
+@app.route('/',methods=['POST','GET'])
 def index():
+    return render_template("menu.html")
+
+@app.route("/predictor",methods=["POST","GET"])
+def predictor():
     def predictor(array, clase):
         df = pd.read_csv('dataset/data_features.csv')
         df1 = pd.read_csv('dataset/data_'+str(clase)+'.csv')
@@ -16,12 +20,12 @@ def index():
         features = dataset.drop('FAMILIA', axis=1)
         targets = dataset['FAMILIA']
         # Split the data into a training and a testing set
-        train_features, test_features, train_targets, test_targets = train_test_split(features, targets, train_size=0.75)
+        train_features, test_features, train_targets, test_targets = train_test_split(features, targets, train_size=0.80)
         # Train the model
         tree= DecisionTreeClassifier(criterion="entropy")
         tree= tree.fit(train_features, train_targets)
         # Make prediction
-        features = pd.DataFrame(data=None,columns=df.columns).drop(['ESPECIE','FAMILIA'], axis=1)
+        features = pd.DataFrame(data=None,columns=df.columns ).drop(['ESPECIE','FAMILIA'], axis=1)
         features.loc[len(df)] = array
         prediction = tree.predict(features)[0]
         # Obtain species
@@ -29,6 +33,7 @@ def index():
         return species
 
     if request.method == 'POST':
+        
         clase = request.form['clase']
         theria = int(request.form['theria']) if request.form['theria'] != "" else 0 
         eutheria = int(request.form['eutheria']) if request.form['eutheria'] != "" else 0 
@@ -108,8 +113,15 @@ def index():
         array.append(psittaciformes)
 
         df = predictor(array, clase)
-        return render_template('index.html', tables=[df.to_html(classes="table table-dark", header="true")])
+        return render_template("predictor.html", tables=[df.to_html(classes="table table-dark", header="true")])
     else:
-        return render_template('index.html')
+        return render_template("predictor.html")
+    
+
+@app.route("/clasificador",methods=["POST"])
+def clasificador():
+    return render_template("clasificador.html")
+
+
 if __name__ == "__main__" :
     app.run(debug=True)

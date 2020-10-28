@@ -1,4 +1,4 @@
-{% extends 'base.html'%}
+{% extends 'estructura.html'%}
 
 {% block head %}
 
@@ -10,8 +10,7 @@
     <h1>Predictor</h1>
 
     <p>La siguiente descripción corresponde con el animal buscado: </p>
-
-    <form action="/" method="POST">
+    <form action="{{ url_for('predictor')}}" method="POST">
         <div id="clase">
             <label>Clase :</label>
             <br>
