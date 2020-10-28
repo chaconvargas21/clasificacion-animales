@@ -1,0 +1,745 @@
+{% extends "estructura.html" %}
+{% block body %}
+
+  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column bg-dark text-white">
+
+
+    <nav class="nav nav-masthead justify-content-center">
+      <h1 class="text-white">CLASIFICADOR</h1>
+    </nav>
+
+      <div class="accordion" id="accordionGeneral">
+        <div class="card text-white">
+          <div class="card-header" id="headingAnimales">
+            <h2 class="mb-0">
+              <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseAnimales" aria-expanded="true" aria-controls="collapseAnimales">
+                ANIMALES
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseAnimales" class="collapse show" aria-labelledby="headingAnimales" data-parent="#accordionGeneral">
+            <div class="card-body ">
+              
+
+              <div class="accordion" id="accordionAnimales">
+                <div class="card">
+                  <div class="card-header" id="headingAves">
+                    <h2 class="mb-0">
+                      <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseAves" aria-expanded="true" aria-controls="collapseAves">
+                        AVES
+                      </button>
+                    </h2>
+                  </div>
+              
+                  <div id="collapseAves" class="collapse" aria-labelledby="headingAves" data-parent="#accordionAnimales">
+                    <div class="card-body">
+                      <div class="accordion" id="accordionListaAves">
+                        <div class="card">
+                          <div class="card-header" id="headingPaliognathae">
+                            <h2 class="mb-0">
+                              <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapsePaliognathae" aria-expanded="true" aria-controls="collapsePaliognathae">
+                                Paliognathae
+                              </button>
+                            </h2>
+                          </div>
+                      
+                          <div id="collapsePaliognathae" class="collapse" aria-labelledby="headingPaliognathae" data-parent="#accordionListaAves">
+                            <div class="card-body">
+                              ----------------
+                              <div class="accordion" id="accordionListaPaliagnothae">
+                                <div class="card">
+                                  <div class="card-header" id="headingStruthioniformes">
+                                    <h2 class="mb-0">
+                                      <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseStruthioniformes" aria-expanded="true" aria-controls="collapseStruthioniformes">
+                                        Struthioniformes
+                                      </button>
+                                    </h2>
+                                  </div>
+                                </div>
+                                <div class="card">
+                                  <div class="card-header" id="headingTinamiformes">
+                                    <h2 class="mb-0">
+                                      <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTinamiformes" aria-expanded="false" aria-controls="collapseTinamiformes">
+                                        Tinamiformes
+                                      </button>
+                                    </h2>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingNeognathae">
+                            <h2 class="mb-0">
+                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseNeognathae" aria-expanded="false" aria-controls="collapseNeognathae">
+                                Neognathae
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseNeognathae" class="collapse" aria-labelledby="headingNeognathae" data-parent="#accordionListaAves">
+                            <div class="card-body">
+                              ----------------
+                              <div class="accordion" id="accordionListaNeognathae">
+                                
+                                <div class="card">
+                                  <div class="card-header" id="headingAnseriformes">
+                                    <h2 class="mb-0">
+                                      <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseAnseriformes" aria-expanded="true" aria-controls="collapseAnseriformes">
+                                        Anseriformes
+                                      </button>
+                                    </h2>
+                                  </div>                          
+                                </div>
+                                <div class="card">
+                                  <div class="card-header" id="headingGalliformes">
+                                    <h2 class="mb-0">
+                                      <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseGalliformes" aria-expanded="false" aria-controls="collapseGalliformes">
+                                        Galliformes
+                                      </button>
+                                    </h2>
+                                  </div>
+                                </div>
+                              
+                              <div class="card">
+                                <div class="card-header" id="headingGaviiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseGaviiformes" aria-expanded="true" aria-controls="collapseGaviiformes">
+                                      Gaviiformes
+                                    </button>
+                                  </h2>
+                                </div>                        
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingPodicipediformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapsePodicipediformes" aria-expanded="true" aria-controls="collapsePodicipediformes">
+                                      Podicipediformes
+                                    </button>
+                                  </h2>
+                                </div>                        
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingSphenisciformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSphenisciformes" aria-expanded="true" aria-controls="collapseSphenisciformes">
+                                      Sphenisciformes
+                                    </button>
+                                  </h2>
+                                </div>                        
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingProcellariiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseProcellariiformes" aria-expanded="true" aria-controls="collapseProcellariiformes">
+                                      Procellariiformes
+                                    </button>
+                                  </h2>
+                                </div>                        
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingPelecaniformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapsePelecaniformes" aria-expanded="true" aria-controls="collapsePelecaniformes">
+                                      Pelecaniformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingCiconiiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseCiconiiformes" aria-expanded="true" aria-controls="collapseCiconiiformes">
+                                      Ciconiiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingPhoenicopteriformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapsePhoenicopteriformes" aria-expanded="true" aria-controls="collapsePhoenicopteriformes">
+                                      Phoenicopteriformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingFalconiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFalconiformes" aria-expanded="true" aria-controls="collapseFalconiformes">
+                                      Falconiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingTurniciformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTurniciformes" aria-expanded="true" aria-controls="collapseTurniciformes">
+                                      Turniciformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingGruiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseGruiformes" aria-expanded="true" aria-controls="collapseGruiformes">
+                                      Gruiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingMesitornithiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseMesitornithiformes" aria-expanded="true" aria-controls="collapseMesitornithiformes">
+                                      Mesitornithiformes
+                                    </button>
+                                  </h2>
+                                </div>                       
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingCharadriiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseCharadriiformes" aria-expanded="true" aria-controls="collapseCharadriiformes">
+                                      Charadriiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingPteroclidiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapsePteroclidiformes" aria-expanded="true" aria-controls="collapsePteroclidiformes">
+                                      Pteroclidiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingColumbiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseColumbiformes" aria-expanded="true" aria-controls="collapseColumbiformes">
+                                      Columbiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingPsittaciformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapsePsittaciformes" aria-expanded="true" aria-controls="collapsePsittaciformes">
+                                      Psittaciformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingOpisthocomiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOpisthocomiformes" aria-expanded="true" aria-controls="collapseOpisthocomiformes">
+                                      Opisthocomiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingMusphagiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseMusphagiformes" aria-expanded="true" aria-controls="collapseMusphagiformes">
+                                      Musphagiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingCuculiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseCuculiformes" aria-expanded="true" aria-controls="collapseCuculiformes">
+                                      Cuculiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingStrigiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseStrigiformes" aria-expanded="true" aria-controls="collapseStrigiformes">
+                                      Strigiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingCaprimulgiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseCaprimulgiformes" aria-expanded="true" aria-controls="collapseCaprimulgiformes">
+                                      Caprimulgiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingApodiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseApodiformes" aria-expanded="true" aria-controls="collapseApodiformes">
+                                      Apodiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingColiiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseColiiformes" aria-expanded="true" aria-controls="collapseColiiformes">
+                                      Coliiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingTrogoniformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTrogoniformes" aria-expanded="true" aria-controls="collapseTrogoniformes">
+                                      Trogoniformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingGalbuliformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseGalbuliformes" aria-expanded="true" aria-controls="collapseGalbuliformes">
+                                      Galbuliformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingUpupiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseUpupiformes" aria-expanded="true" aria-controls="collapseUpupiformes">
+                                      Upupiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingCoraciiformes">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-info btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseCoraciiformes" aria-expanded="true" aria-controls="collapseCoraciiformes">
+                                      Coraciiformes
+                                    </button>
+                                  </h2>
+                                </div>          
+                              </div>
+
+                            </div>
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingMamiferos">
+                    <h2 class="mb-0">
+                      <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseMamiferos" aria-expanded="false" aria-controls="collapseMamiferos">
+                        MAMIFEROS
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseMamiferos" class="collapse" aria-labelledby="headingMamiferos" data-parent="#accordionAnimales">
+                    <div class="card-body">
+
+                      <div class="accordion" id="accordionListaMamiferos">
+                        <div class="card">
+                          <div class="card-header" id="headingPrototheria">
+                            <h2 class="mb-0">
+                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapsePrototheria" aria-expanded="false" aria-controls="collapsePrototheria">
+                                Prototheria
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapsePrototheria" class="collapse" aria-labelledby="headingPrototheria" data-parent="#accordionListaMamiferos">
+                            <div class="card-body">
+
+                              <div class="accordion" id="accordionListaPrototheria">
+                                <div class="card">
+                                  <div class="card-header" id="headingMonotremata">
+                                    <h2 class="mb-0">
+                                      <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseMonotremata" aria-expanded="false" aria-controls="collapseMonotremata">
+                                        Monotremata
+                                      </button>
+                                    </h2>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingTheria">
+                            <h2 class="mb-0">
+                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTheria" aria-expanded="false" aria-controls="collapseTheria">
+                                Theria
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseTheria" class="collapse" aria-labelledby="headingTheria" data-parent="#accordionListaMamiferos">
+                            <div class="card-body">
+                              
+                              <div class="accordion" id="accordionListaTheria">
+                                <div class="card">
+                                  <div class="card-header" id="headingMetatheria">
+                                    <h2 class="mb-0">
+                                      <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseMetatheria" aria-expanded="false" aria-controls="collapseMetatheria">
+                                        Metatheria
+                                      </button>
+                                    </h2>
+                                  </div>
+                                  <div id="collapseMetatheria" class="collapse" aria-labelledby="headingMetatheria" data-parent="#accordionListaTheria">
+                                    <div class="card-body">
+                                      
+                                      <div class="accordion" id="accordionListaMetatheria">
+                                        <div class="card">
+                                          <div class="card-header" id="headingDidelphimorphia">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseDidelphimorphia" aria-expanded="false" aria-controls="collapseDidelphimorphia">
+                                                Didelphimorphia
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingPaucituberculata">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapsePaucituberculata" aria-expanded="false" aria-controls="collapsePaucituberculata">
+                                                Paucituberculata
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingMicrobiotheria">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseMicrobiotheria" aria-expanded="false" aria-controls="collapseMicrobiotheria">
+                                                Microbiotheria
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingDasyuromorphia">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseDasyuromorphia" aria-expanded="false" aria-controls="collapseDasyuromorphia">
+                                                Dasyuromorphia
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingPeramelemorphia">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapsePeramelemorphia" aria-expanded="false" aria-controls="collapsePeramelemorphia">
+                                                Peramelemorphia
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingNotoryctemorphia">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseNotoryctemorphia" aria-expanded="false" aria-controls="collapseNotoryctemorphia">
+                                                Notoryctemorphia
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingDiprotodontia">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseDiprotodontia" aria-expanded="false" aria-controls="collapseDiprotodontia">
+                                                Diprotodontia
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  
+
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="card">
+                                  <div class="card-header" id="headingEutheria">
+                                    <h2 class="mb-0">
+                                      <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEutheria" aria-expanded="false" aria-controls="collapseEutheria">
+                                        Eutheria
+                                      </button>
+                                    </h2>
+                                  </div>
+                                  <div id="collapseEutheria" class="collapse" aria-labelledby="headingEutheria" data-parent="#accordionListaTheria">
+                                    <div class="card-body">
+                                      
+                                      ----------------
+                                      <div class="accordion" id="accordionListaEutheria">
+                                        <div class="card">
+                                          <div class="card-header" id="headingPilosa">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapsePilosa" aria-expanded="false" aria-controls="collapsePilosa">
+                                                Pilosa
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingCingulata">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseCingulata" aria-expanded="false" aria-controls="collapseCingulata">
+                                                Cingulata
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingAfrosoricida">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseAfrosoricida" aria-expanded="false" aria-controls="collapseAfrosoricida">
+                                                Afrosoricida
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingErinaceomorpha">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseErinaceomorpha" aria-expanded="false" aria-controls="collapseErinaceomorpha">
+                                                Erinaceomorpha
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingSoricomorpha">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSoricomorpha" aria-expanded="false" aria-controls="collapseSoricomorpha">
+                                                Soricomorpha
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingScandentia">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseScandentia" aria-expanded="false" aria-controls="collapseScandentia">
+                                                Scandentia
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingDermoptera">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseDermoptera" aria-expanded="false" aria-controls="collapseDermoptera">
+                                                Dermoptera
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingPrimates">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapsePrimates" aria-expanded="false" aria-controls="collapsePrimates">
+                                                Primates
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingCarnivora">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseCarnivora" aria-expanded="false" aria-controls="collapseCarnivora">
+                                                Carnivora
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingCetacea">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseCetacea" aria-expanded="false" aria-controls="collapseCetacea">
+                                                Cetacea
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingSirenia">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSirenia" aria-expanded="false" aria-controls="collapseSirenia">
+                                                Sirenia
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingProboscidea">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseProboscidea" aria-expanded="false" aria-controls="collapseProboscidea">
+                                                Proboscidea
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingPerissodactyla">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapsePerissodactyla" aria-expanded="false" aria-controls="collapsePerissodactyla">
+                                                Perissodactyla
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingHyracoidea">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseHyracoidea" aria-expanded="false" aria-controls="collapseHyracoidea">
+                                                Hyracoidea
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingTubulidentata">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTubulidentata" aria-expanded="false" aria-controls="collapseTubulidentata">
+                                                Tubulidentata
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingArtiodactyla">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseArtiodactyla" aria-expanded="false" aria-controls="collapseArtiodactyla">
+                                                Artiodactyla
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingPholidota">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapsePholidota" aria-expanded="false" aria-controls="collapsePholidota">
+                                                Pholidota
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingRodentia">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseRodentia" aria-expanded="false" aria-controls="collapseRodentia">
+                                                Rodentia
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingLagomorpha">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseLagomorpha" aria-expanded="false" aria-controls="collapseLagomorpha">
+                                                Lagomorpha
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <div class="card-header" id="headingMacroscelidea">
+                                            <h2 class="mb-0">
+                                              <button class="btn btn-info btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseMacroscelidea" aria-expanded="false" aria-controls="collapseMacroscelidea">
+                                                Macroscelidea
+                                              </button>
+                                            </h2>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+{% endblock %}
